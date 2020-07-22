@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# REACT BASICS
 
-## Available Scripts
+## INSTALLING REACT IN YOUR MACHINE
 
-In the project directory, you can run:
+1).Open comand line and type:
+    $ npm install -g create-react-app
+2). Create a React application:
+    $ create-react-app <folder name>
+3).Starting React application in the server:
+    $ npm start
 
-### `yarn start`
+## EXPLORING FOLDERS AND FILES OF APPLICATION
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###### 1).public folder: It contains index.html file. We have a single html file which displays on the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+###### 2).src folder: This is the main folder which contains the most important files:
 
-### `yarn test`
+1).index.js: It is the most imporatant file. It is the parent component. It contains a virtual DOM which changes by its child components. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2)App.js: It is the child component of index.js. All other child components are called to App.js
 
-### `yarn build`
+## Basic Structure of a file in React:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###### Exporting Files from Child component to Parent
+Every file in React needs to be exported to the parent component. For example:
+In app.js we write a command:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+export default App; //This command exports the content present in the file    
+                    // to its parent component which in the case is index.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###### Importing Files into Parent component from Child 
+Once you have exported a child component to the parent compnent it needs to be imported by  the parent. For.e.g : 
+In index.js we write a command:
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+import <Component Name> from <File Name>;
