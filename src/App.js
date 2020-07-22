@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import School from './school.js';
 
-function App() {
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "App">
+      <School langName = "HTML,CSS" frameWork = "Bootstrap"/>
+      <hr />
+      <School langName = "Wordpress" frameWork = "Asyn Rust"/>
     </div>
   );
 }
 
-export default App;
+
+
+export default App; //App.js is exported to index.js
